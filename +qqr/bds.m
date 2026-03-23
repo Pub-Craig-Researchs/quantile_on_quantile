@@ -1,5 +1,10 @@
 function [w, sig, c, c1, k] = bds (series, maxdim, distance, flag, maxram)
-
+%BDS Brock-Dechert-Scheinkman (BDS) test for independence
+%
+% The BDS test is a nonparametric statistical test for detecting serial
+% dependence in time series, based on the correlation dimension. It can
+% detect many types of linear and nonlinear dependence.
+%
 %BDS Brock, Dechert & Scheinkman test for independence based on the correlation dimension
 %
 % [W, SIG, C, C1, K] = BDS (SERIES, MAXDIM, DISTANCE, METHOD, MAXRAM)
@@ -585,11 +590,11 @@ w = sqrt(n-(2:maxdim)+1) .* (c-c1(2:maxdim).^(2:maxdim)) ./ sigma; % or use sub-
 
 % REFERENCES:
 %
-% Brock, William, Davis Dechert & Jos� Scheinkman (1987), "A Test for Independence
+% Brock, William, Davis Dechert & José Scheinkman (1987), "A Test for Independence
 %    Based on the Correlation Dimension", University of Wisconsin-Madison, Social
 %    Science Research Working Paper, no. 8762
 %
-% Brock, William, Davis Dechert, Jos� Scheinkman & Blake LeBaron (1996), "A test for
+% Brock, William, Davis Dechert, José Scheinkman & Blake LeBaron (1996), "A test for
 %    independence based on the correlation dimension", Econometric Reviews, vol. 15,
 %    no. 3 (August), pp. 197-235, revised version of Brock et al. (1987)
 %
